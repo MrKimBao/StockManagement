@@ -6,8 +6,9 @@
 <hr>
 <div class="row">
     <div class="col-xs-12">
-        <a href="#" class="lis-group-item clearfix" *ngFor="let recipe of recipes">
-            <app-recipe-item></app-recipe-item>
-        </a>
+        <app-recipe-item 
+            *ngFor="let recipeEl of recipes"
+            [recipe]="recipeEl">
+        </app-recipe-item>
     </div>
 </div>

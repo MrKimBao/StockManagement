@@ -6,18 +6,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Recipes</a>
+                <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Shopping List</a>
+                <a class="nav-link" href="#" (click)="onSelect('shopping-list')">Shopping List</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">Manage</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Save Data</a>
-                    <a class="dropdown-item" href="#">Fetch Data</a>
+            <li class="nav-item" ngbDropdown>
+                <a href (click)="false" class="nav-link" ngbDropdownToggle>Manage</a>
+                <div ngbDropdownMenu class="dropdown-menu-right">
+                    <button ngbDropdownItem>Save Data</button>
+                    <button ngbDropdownItem>Fetch Data</button>
                 </div>
             </li>
         </ul>
